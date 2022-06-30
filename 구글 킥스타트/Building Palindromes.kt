@@ -4,7 +4,7 @@ import java.io.*
 // https://www.acmicpc.net/problem/23932
 // 펠린드롬은 알파벳 개수를 세아려서 홀수인 알파벳이 2개 이상일 경우, 펠린드롬이 불가능하다.
 
-private lateinit var arr : Array<IntArray>
+private var arr : Array<IntArray> = Array(100100){IntArray(26)}
 fun main() {
     val path = "C:\\Users\\Samsung\\Desktop\\코틀린 알고리즘\\src\\main\\kotlin\\구글 킥스타트\\res\\test3.txt"
     val br = BufferedReader(File(path).bufferedReader())
@@ -20,7 +20,6 @@ fun main() {
         var Q = st.nextToken().toInt() // 질문의 수
         var chArr = br.readLine().toCharArray()
 
-        arr = Array(N+1){IntArray(26)}
         for(i in 1..N) {
             for(j in 0 until 26) {
                 if (chArr[i - 1] - 'A' == j) arr[i][j] = arr[i - 1][j] + 1
@@ -43,6 +42,6 @@ private fun checkPalindrome(L : Int, R : Int) : Boolean {
         odd += (arr[R][i] - arr[L-1][i]) % 2
     }
 
-    if(odd < 2) return true;
+    if(odd < 2) return true
     return false
 } // End of checkPalindrome
