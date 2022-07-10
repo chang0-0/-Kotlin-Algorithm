@@ -22,4 +22,4 @@ private fun DP(N : Int) {
         memo[i][0] = 1
         for(j in 1..i) memo[i][j] = (memo[i-1][j-1] + memo[i-1][j]) % mod
     }
-} // of DP
+} // End of DP
