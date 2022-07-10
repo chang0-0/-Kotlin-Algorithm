@@ -7,7 +7,7 @@ import java.util.*;
 // 이 외는 접점이 있음.
 
 fun main() {
-    var path = "C:\\Users\\Samsung\\Desktop\\코틀린 알고리즘\\src\\main\\kotlin\\res\\input_bj_1002.txt"
+    var path = "C:\\Users\\Samsung\\Desktop\\코틀린 알고리즘\\src\\main\\kotlin\\일반구현.res\\input_bj_1002.txt"
     var br = BufferedReader(File(path).bufferedReader())
     var sb = StringBuilder()
 
