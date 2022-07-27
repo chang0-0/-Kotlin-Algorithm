@@ -13,13 +13,21 @@ fun main() {
 
     for(i in 0 until N) {
         var count = arr[i]
+        println("count : ${count}")
 
         for(j in 0 until N) {
-            if(count == 0) {
-                if(ans[j] == 0) ans[j] = i+1; break
+            println("j : ${j}")
+
+            if(count == 0) { // 본인 왼쪽에 키가 큰 사람이 아무도 없음
+                if(ans[j] == 0) { // 자리가 비어 있음
+                    ans[j] = i + 1
+                    break
+                }
             }
             else if(ans[j] == 0) count--
+
         }
+        println(Arrays.toString(ans))
     }
 
     ans.forEach { sb.append(it).append(' ') }
